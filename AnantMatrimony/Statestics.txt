@@ -1,0 +1,34 @@
+﻿	Total	Free	Paid	%
+July	172	151	21	12.21
+June	273	231	42	15.38
+May	281	238	43	15.30
+April	277	221	56	20.22
+March	294	250	44	14.97
+Feb	218	157	61	27.98
+Jan	216	166	50	23.15
+				
+			AVG : 45	
+				
+				
+		Total Active Customer : 		10665
+		Total Paid Customer :		3018
+			%	28.30
+When update sometime this fields are blank
+Weight
+address1
+address2
+Landline
+Landlineno1
+Religion
+caste
+SecondaryEmailId
+Father Occupation
+Mother Occupation
+MosalPlace
+Nativ Place
+Work Address
+Annual Income Currency
+Annual Income 
+Degree
+OccupationDtls
+Age Diff

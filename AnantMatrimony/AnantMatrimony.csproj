@@ -1,0 +1,762 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43FE5715-9B4B-457A-91E1-2038856E4D49}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AnantMatrimony</RootNamespace>
+    <AssemblyName>AnantMatrimony</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AnantMatrimony_Offline\AnantMatrimony\AnantMatrimony\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AnantMatrimony_Offline\AnantMatrimony\AnantMatrimony\bin\Debug\CrystalDecisions.ReportSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AnantMatrimony_Offline\AnantMatrimony\AnantMatrimony\bin\Debug\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AnantMatrimony_Offline\AnantMatrimony\AnantMatrimony\bin\Debug\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnantProp\tbl_AnnualIncomeCurrencyProp.cs" />
+    <Compile Include="AnantProp\tbl_AnualIncomeProp.cs" />
+    <Compile Include="AnantProp\tbl_BloodGroupProp.cs" />
+    <Compile Include="AnantProp\tbl_CasteProp.cs" />
+    <Compile Include="AnantProp\tbl_CountryProp.cs" />
+    <Compile Include="AnantProp\tbl_EducationProp.cs" />
+    <Compile Include="AnantProp\tbl_FollowUp.cs" />
+    <Compile Include="AnantProp\tbl_MemberMasterProp.cs" />
+    <Compile Include="AnantProp\tbl_MemberPhotosProp.cs" />
+    <Compile Include="AnantProp\tbl_MembershipMasterProp.cs" />
+    <Compile Include="AnantProp\tbl_MembershipTypeProp.cs" />
+    <Compile Include="AnantProp\tbl_OccupationProp.cs" />
+    <Compile Include="AnantProp\tbl_Package.cs" />
+    <Compile Include="AnantProp\tbl_PartnersPreferencesProp.cs" />
+    <Compile Include="AnantProp\tbl_ProfileCreatedByProp.cs" />
+    <Compile Include="AnantProp\tbl_QueryProp.cs" />
+    <Compile Include="AnantProp\tbl_SibblingDetailsProp.cs" />
+    <Compile Include="AnantProp\tbl_StateCityProp.cs" />
+    <Compile Include="AnantProp\tbl_SubCasteProp.cs" />
+    <Compile Include="AnantProp\tbl_UpdateMemberMasterProp.cs" />
+    <Compile Include="AnantProp\tbl_UpdatePartnersPreferencesProp.cs" />
+    <Compile Include="AnantProp\tbl_UpdateSibblingDetailsProp.cs" />
+    <Compile Include="AnantProp\tbl_VisaStatusProp.cs" />
+    <Compile Include="AnantProp\tbl_WorkingAsProp.cs" />
+    <Compile Include="AnantProp\tbl_WorkingWithProp.cs" />
+    <Compile Include="bin\Debug\REPORTS\BookmarkLog.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookmarkLog.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\REPORTS\ExpiredMembership1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExpiredMembership.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\REPORTS\MemberEmailList1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemberEmailList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\REPORTS\MemberMaster1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemberMaster.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\REPORTS\MemberMaster_Blank.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemberMaster_Blank.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\REPORTS\MemberPhoneNumber1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemberPhoneNumber.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\REPORTS\PaidMembership1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaidMembership.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\REPORTS\PhotoUploadPending1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhotoUploadPending.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\REPORTS\ProfileReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProfileReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\REPORTS\RegisterReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\REPORTS\Test.cs" />
+    <Compile Include="bin\Debug\REPORTS\Test1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Test.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsAnantMetrimony.cs">
+      <DependentUpon>dsAnantMetrimony.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsAnantMetrimony.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAnantMetrimony.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmBookmarkLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmBookmarkLog.Designer.cs">
+      <DependentUpon>frmBookmarkLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmCommonHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmCommonHelp.designer.cs">
+      <DependentUpon>frmCommonHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmCommonMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmCommonMaster.Designer.cs">
+      <DependentUpon>frmCommonMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmDeletePhotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmDeletePhotos.Designer.cs">
+      <DependentUpon>frmDeletePhotos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmEmailSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmEmailSetting.Designer.cs">
+      <DependentUpon>frmEmailSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmExpireNoti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmExpireNoti.Designer.cs">
+      <DependentUpon>frmExpireNoti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmFirstPageEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmFirstPageEmail.Designer.cs">
+      <DependentUpon>frmFirstPageEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmFirstPageSMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmFirstPageSMS.Designer.cs">
+      <DependentUpon>frmFirstPageSMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmFollowUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmFollowUp.Designer.cs">
+      <DependentUpon>frmFollowUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmMarriedConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmMarriedConfirmation.Designer.cs">
+      <DependentUpon>frmMarriedConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmMasterListWithIds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmMasterListWithIds.Designer.cs">
+      <DependentUpon>frmMasterListWithIds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmMemberMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmMemberMaster.Designer.cs">
+      <DependentUpon>frmMemberMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmMemberMasterList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmMemberMasterList.Designer.cs">
+      <DependentUpon>frmMemberMasterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmMembershipMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmMembershipMaster.Designer.cs">
+      <DependentUpon>frmMembershipMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmMessageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmMessageList.Designer.cs">
+      <DependentUpon>frmMessageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmMobileNoUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmMobileNoUpdate.Designer.cs">
+      <DependentUpon>frmMobileNoUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmPackages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmPackages.Designer.cs">
+      <DependentUpon>frmPackages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmPhotosUploadInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmPhotosUploadInfo.Designer.cs">
+      <DependentUpon>frmPhotosUploadInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmProfileVisitLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmProfileVisitLog.Designer.cs">
+      <DependentUpon>frmProfileVisitLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmQueryMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmQueryMessage.Designer.cs">
+      <DependentUpon>frmQueryMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmReportViewer.Designer.cs">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmSearch.designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmSendProfileSMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmSendProfileSMS.Designer.cs">
+      <DependentUpon>frmSendProfileSMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmSendSMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmSendSMS.Designer.cs">
+      <DependentUpon>frmSendSMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmSMSSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmSMSSend.Designer.cs">
+      <DependentUpon>frmSMSSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmSMSTemplateMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmSMSTemplateMaster.Designer.cs">
+      <DependentUpon>frmSMSTemplateMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmStateCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmStateCity.Designer.cs">
+      <DependentUpon>frmStateCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmSubCaste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmSubCaste.Designer.cs">
+      <DependentUpon>frmSubCaste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmWorkReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmWorkReport.Designer.cs">
+      <DependentUpon>frmWorkReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmWorkReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmWorkReportView.Designer.cs">
+      <DependentUpon>frmWorkReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmZdatamigrate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmZdatamigrate.Designer.cs">
+      <DependentUpon>frmZdatamigrate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\LogInLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\LogInLog.Designer.cs">
+      <DependentUpon>LogInLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\rfrmAdvMainReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\rfrmAdvMainReport.Designer.cs">
+      <DependentUpon>rfrmAdvMainReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\rfrmExpiredMembership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\rfrmExpiredMembership.Designer.cs">
+      <DependentUpon>rfrmExpiredMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\rfrmHeadingWiseReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\rfrmHeadingWiseReport.Designer.cs">
+      <DependentUpon>rfrmHeadingWiseReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\rfrmMemberSearchLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\rfrmMemberSearchLog.Designer.cs">
+      <DependentUpon>rfrmMemberSearchLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\rfrmPaidMembership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\rfrmPaidMembership.Designer.cs">
+      <DependentUpon>rfrmPaidMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\rfrmQuickReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\rfrmQuickReport.Designer.cs">
+      <DependentUpon>rfrmQuickReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\rfrmRegistrationReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\rfrmRegistrationReports.Designer.cs">
+      <DependentUpon>rfrmRegistrationReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatrimonyBAL\tbl_AnnualIncomeCurrencyBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_AnualIncomeBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_BloodGroupBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_CasteBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_CountryBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_EducationBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_FollowUpBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_MemberMasterBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_MemberPhotosBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_MembershipMasterBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_MembershipTypeBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_OccupationBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_PartnersPreferencesBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_ProfileCreatedByBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_QueryBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_SibblingDetailsBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_StateCityBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_SubCasteBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_UpdateMemberMasterBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_UpdatePartnersPreferencesBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_UpdateSibblingDetailsBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_VisaStatusBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_WorkingAsBAL.cs" />
+    <Compile Include="MatrimonyBAL\tbl_WorkingWithBAL.cs" />
+    <Compile Include="MatrimonyDAL\dbInteraction.cs" />
+    <Compile Include="MatrimonyDAL\tbl_AnnualIncomeCurrencyDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_AnualIncomeDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_BloodGroupDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_CasteDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_CountryDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_EducationDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_FollowUpDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_MemberMasterDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_MemberPhotosDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_MembershipMasterDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_MembershipTypeDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_OccupationDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_PartnersPreferencesDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_ProfileCreatedByDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_QueryDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_SibblingDetailsDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_StateCityDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_SubCasteDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_UpdateMemberMasterDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_UpdatePartnersPreferencesDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_UpdateSibblingDetailsDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_VisaStatusDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_WorkingAsDAL.cs" />
+    <Compile Include="MatrimonyDAL\tbl_WorkingWithDAL.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UD_CLASS\CustomizeGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UD_CLASS\EventLogging.cs" />
+    <Compile Include="UD_CLASS\ftpUpload.cs" />
+    <Compile Include="UD_CLASS\Global.cs" />
+    <Compile Include="UD_CLASS\ICommonFunctions.cs" />
+    <EmbeddedResource Include="bin\Debug\REPORTS\BookmarkLog.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BookmarkLog.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\REPORTS\ExpiredMembership.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ExpiredMembership1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\REPORTS\MemberEmailList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MemberEmailList1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\REPORTS\MemberMaster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MemberMaster1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\REPORTS\MemberMaster_Blank.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MemberMaster_Blank.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\REPORTS\MemberPhoneNumber.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MemberPhoneNumber1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\REPORTS\PaidMembership.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PaidMembership1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\REPORTS\PhotoUploadPending.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PhotoUploadPending1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\REPORTS\ProfileReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProfileReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\REPORTS\RegisterReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RegisterReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\REPORTS\Test.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Test1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmBookmarkLog.resx">
+      <DependentUpon>frmBookmarkLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmCommonHelp.resx">
+      <DependentUpon>frmCommonHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmCommonMaster.resx">
+      <DependentUpon>frmCommonMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmDeletePhotos.resx">
+      <DependentUpon>frmDeletePhotos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmEmailSetting.resx">
+      <DependentUpon>frmEmailSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmExpireNoti.resx">
+      <DependentUpon>frmExpireNoti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmFirstPageEmail.resx">
+      <DependentUpon>frmFirstPageEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmFirstPageSMS.resx">
+      <DependentUpon>frmFirstPageSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmFollowUp.resx">
+      <DependentUpon>frmFollowUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmMarriedConfirmation.resx">
+      <DependentUpon>frmMarriedConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmMasterListWithIds.resx">
+      <DependentUpon>frmMasterListWithIds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmMemberMaster.resx">
+      <DependentUpon>frmMemberMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmMemberMasterList.resx">
+      <DependentUpon>frmMemberMasterList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmMembershipMaster.resx">
+      <DependentUpon>frmMembershipMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmMessageList.resx">
+      <DependentUpon>frmMessageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmMobileNoUpdate.resx">
+      <DependentUpon>frmMobileNoUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmPackages.resx">
+      <DependentUpon>frmPackages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmPhotosUploadInfo.resx">
+      <DependentUpon>frmPhotosUploadInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmProfileVisitLog.resx">
+      <DependentUpon>frmProfileVisitLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmQueryMessage.resx">
+      <DependentUpon>frmQueryMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmReportViewer.resx">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmSendProfileSMS.resx">
+      <DependentUpon>frmSendProfileSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmSendSMS.resx">
+      <DependentUpon>frmSendSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmSMSSend.resx">
+      <DependentUpon>frmSMSSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmSMSTemplateMaster.resx">
+      <DependentUpon>frmSMSTemplateMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmStateCity.resx">
+      <DependentUpon>frmStateCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmSubCaste.resx">
+      <DependentUpon>frmSubCaste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmWorkReport.resx">
+      <DependentUpon>frmWorkReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmWorkReportView.resx">
+      <DependentUpon>frmWorkReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmZdatamigrate.resx">
+      <DependentUpon>frmZdatamigrate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\LogInLog.resx">
+      <DependentUpon>LogInLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\rfrmAdvMainReport.resx">
+      <DependentUpon>rfrmAdvMainReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\rfrmExpiredMembership.resx">
+      <DependentUpon>rfrmExpiredMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\rfrmHeadingWiseReport.resx">
+      <DependentUpon>rfrmHeadingWiseReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\rfrmMemberSearchLog.resx">
+      <DependentUpon>rfrmMemberSearchLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\rfrmPaidMembership.resx">
+      <DependentUpon>rfrmPaidMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\rfrmQuickReport.resx">
+      <DependentUpon>rfrmQuickReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\rfrmRegistrationReports.resx">
+      <DependentUpon>rfrmRegistrationReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsAnantMetrimony.xsc">
+      <DependentUpon>dsAnantMetrimony.xsd</DependentUpon>
+    </None>
+    <None Include="dsAnantMetrimony.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAnantMetrimony.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsAnantMetrimony.xss">
+      <DependentUpon>dsAnantMetrimony.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Statestics.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
